@@ -5,9 +5,7 @@ description = "CLI-утилита для заметок"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
-authors = [
-    { name = "qscorpi" },
-]
+authors = [{ name = "qscorpi" }]
 
 [project.scripts]
 notes = "notes.cli:main"
@@ -18,13 +16,16 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["ruff>=0.16"]
