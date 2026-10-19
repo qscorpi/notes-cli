@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "notes-cli"
 version = "0.1.0"
@@ -6,6 +10,8 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [{ name = "qscorpi" }]
+[tool.uv]
+package = true
 
 [project.scripts]
 notes = "notes.cli:main"
@@ -29,3 +35,6 @@ testpaths = ["tests"]
 
 [dependency-groups]
 dev = ["ruff>=0.16"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["notes"]
