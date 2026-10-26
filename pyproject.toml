@@ -34,7 +34,10 @@ select = [
 testpaths = ["tests"]
 
 [dependency-groups]
-dev = ["ruff>=0.16"]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["notes"]
